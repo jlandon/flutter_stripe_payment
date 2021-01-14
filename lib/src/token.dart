@@ -4,8 +4,9 @@ class Token {
   double created;
   bool livemode;
   String tokenId;
+  Map<String, dynamic> extra;
 
-  Token({this.bankAccount, this.card, this.created, this.livemode, this.tokenId});
+  Token({this.bankAccount, this.card, this.created, this.livemode, this.tokenId, this.extra});
 
   factory Token.fromJson(Map<dynamic, dynamic> json) {
     return Token(
@@ -14,6 +15,7 @@ class Token {
       created: json['created'] is int ? (json['created'] as int).toDouble() : json['created'],
       livemode: json['livemode'],
       tokenId: json['tokenId'],
+      extra: json['extra'] != null && json['extra'] is Map<dynamic, dynamic> ? Map<String, dynamic>.from(json['extra']) : null,
     );
   }
 
@@ -27,6 +29,9 @@ class Token {
     }
     if (this.card != null) {
       data['card'] = this.card.toJson();
+    }
+    if (this.extra != null) {
+      data['extra'] = this.extra;
     }
     return data;
   }

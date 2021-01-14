@@ -1629,6 +1629,8 @@ void initializeTPSPaymentNetworksWithConditionalMappings() {
 
     if (inputContact.name) {
         [contactDetails setValue:[NSPersonNameComponentsFormatter localizedStringFromPersonNameComponents:inputContact.name style:NSPersonNameComponentsFormatterStyleDefault options:0] forKey:@"name"];
+        [contactDetails setValue:inputContact.name.givenName forKey:@"givenName"];
+        [contactDetails setValue:inputContact.name.familyName forKey:@"familyName"];
     }
 
     if (inputContact.phoneNumber) {
