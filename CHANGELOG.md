@@ -1,3 +1,24 @@
+## [1.1.5]
+- Fix #331
+## [1.1.4]
+- Fix #311
+
+## [1.1.3]
+- Fix #301, #304, #305
+
+## [1.1.1]
+- add information about the plugin being discontinued and its replacement
+
+## [1.1.0]
+- support for null safety
+- Xcode 12.5 is not supported - see this [discussion](https://github.com/jonasbark/flutter_stripe_payment/issues/284#issuecomment-828293850) for a fix
+
+## [1.0.11]
+- fix #258 (by @Trede98)
+
+## [1.0.10]
+- update sdk signature information (by @davidme-stripe)
+
 ## [1.0.9]
 - fix issues with Stripe iOS dependency
 
@@ -30,7 +51,7 @@
 
 ## [1.0.0]
 
-the stripe_payment plugin is now ported from tipsi-stripe React Native plugin: 
+the stripe_payment plugin is now ported from tipsi-stripe React Native plugin:
 https://github.com/tipsi/tipsi-stripe
 New features include:
 ### Native Pay -  & G
@@ -96,7 +117,7 @@ Added support for:
 
 ## [0.0.8] - 08.12.2018
 
-* Fix crash on iOS for newer Flutter beta (fixes https://github.com/jonasbark/flutter_stripe_payment/issues/12) 
+* Fix crash on iOS for newer Flutter beta (fixes https://github.com/jonasbark/flutter_stripe_payment/issues/12)
 
 ## [0.0.7] - 03.12.2018
 

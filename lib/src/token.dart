@@ -1,10 +1,10 @@
 class Token {
-  BankAccount bankAccount;
-  CreditCard card;
-  double created;
-  bool livemode;
-  String tokenId;
-  Map<String, dynamic> extra;
+  BankAccount? bankAccount;
+  CreditCard? card;
+  double? created;
+  bool? livemode;
+  String? tokenId;
+  Map<String, dynamic>? extra;
 
   Token({this.bankAccount, this.card, this.created, this.livemode, this.tokenId, this.extra});
 
@@ -25,10 +25,10 @@ class Token {
     if (this.livemode != null) data['livemode'] = this.livemode;
     if (this.tokenId != null) data['tokenId'] = this.tokenId;
     if (this.bankAccount != null) {
-      data['bankAccount'] = this.bankAccount.toJson();
+      data['bankAccount'] = this.bankAccount!.toJson();
     }
     if (this.card != null) {
-      data['card'] = this.card.toJson();
+      data['card'] = this.card!.toJson();
     }
     if (this.extra != null) {
       data['extra'] = this.extra;
@@ -38,26 +38,27 @@ class Token {
 }
 
 class BankAccount {
-  String accountHolderName;
-  String accountHolderType;
-  String accountNumber;
-  String bankName;
-  String countryCode;
-  String currency;
-  String fingerprint;
-  String last4;
-  String routingNumber;
+  String? accountHolderName;
+  String? accountHolderType;
+  String? accountNumber;
+  String? bankName;
+  String? countryCode;
+  String? currency;
+  String? fingerprint;
+  String? last4;
+  String? routingNumber;
 
-  BankAccount(
-      {this.accountHolderName,
-      this.accountHolderType,
-      this.accountNumber,
-      this.bankName,
-      this.countryCode,
-      this.currency,
-      this.fingerprint,
-      this.last4,
-      this.routingNumber});
+  BankAccount({
+    this.accountHolderName,
+    this.accountHolderType,
+    this.accountNumber,
+    this.bankName,
+    this.countryCode,
+    this.currency,
+    this.fingerprint,
+    this.last4,
+    this.routingNumber,
+  });
 
   factory BankAccount.fromJson(Map<dynamic, dynamic> json) {
     return BankAccount(
@@ -89,44 +90,26 @@ class BankAccount {
 }
 
 class CreditCard {
-  String addressCity;
-  String addressCountry;
-  String addressLine1;
-  String addressLine2;
-  String addressState;
-  String addressZip;
-  String brand;
-  String cardId;
-  String country;
-  String currency;
-  int expMonth;
-  int expYear;
-  String funding;
-  String last4;
-  String name;
-  String number;
-  String cvc;
-  String token;
+  String? addressCity;
+  String? addressCountry;
+  String? addressLine1;
+  String? addressLine2;
+  String? addressState;
+  String? addressZip;
+  String? brand;
+  String? cardId;
+  String? country;
+  String? currency;
+  int? expMonth;
+  int? expYear;
+  String? funding;
+  String? last4;
+  String? name;
+  String? number;
+  String? cvc;
+  String? token;
 
-  CreditCard(
-      {this.addressCity,
-      this.addressCountry,
-      this.addressLine1,
-      this.addressLine2,
-      this.addressState,
-      this.addressZip,
-      this.brand,
-      this.cardId,
-      this.currency,
-      this.country,
-      this.expMonth,
-      this.expYear,
-      this.number,
-      this.token,
-      this.cvc,
-      this.funding,
-      this.last4,
-      this.name});
+  CreditCard({this.addressCity, this.addressCountry, this.addressLine1, this.addressLine2, this.addressState, this.addressZip, this.brand, this.cardId, this.currency, this.country, this.expMonth, this.expYear, this.number, this.token, this.cvc, this.funding, this.last4, this.name});
 
   factory CreditCard.fromJson(Map<dynamic, dynamic> json) {
     return CreditCard(
